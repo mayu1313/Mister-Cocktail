@@ -2,6 +2,9 @@
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+  Cool articles
+</div>
   <% end %>
 </ul>
 <%= link_to "New_cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
